@@ -1,0 +1,68 @@
+:root {
+  /* typography */
+  --ff: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --lh: 1.5;
+  --fw: 400;
+
+  /* colors */
+  --text: rgba(255,255,255,.87);
+  --bg: #242424;
+  --link: #646cff;
+  --link-h: #535bf2;
+  --btn-bg: #1a1a1a;
+
+  color-scheme: light dark;
+  font-family: var(--ff);
+  line-height: var(--lh);
+  font-weight: var(--fw);
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #213547;
+    --bg: #fff;
+    --link-h: #747bff;
+    --btn-bg: #f9f9f9;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--link-h);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: .6em 1.2em;
+  font: inherit;
+  background-color: var(--btn-bg);
+  cursor: pointer;
+  transition: border-color .25s;
+}
+button:hover {
+  border-color: var(--link);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
